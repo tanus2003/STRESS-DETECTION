@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stress Detection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Stress Detection Form</h2>
+        <form id="stress-form">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="sleep-time">Average Sleep Hours:</label>
+            <input type="number" id="sleep-time" name="sleep-time" required>
+
+            <label for="exercise">Do you exercise regularly?</label>
+            <select id="exercise" name="exercise" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="heartbeat">Resting Heart Rate (bpm):</label>
+            <input type="number" id="heartbeat" name="heartbeat" required>
+
+            <label for="description">Describe your current problems or stress factors:</label>
+            <textarea id="description" name="description" rows="4" placeholder="Write a brief description about your problem..." required></textarea>
+
+            <button type="submit" id="submit-btn">Check Stress Level</button>
+        </form>
+
+        <div id="result"></div>
+        <div id="message"></div>
+        <div id="recommendations"></div>
+        <div id="doctor-info"></div>
+
+        <!-- Logout button -->
+        <button id="logout-btn" style="display:none;" onclick="logout()">Logout</button>
+
+        <!-- Feedback Form -->
+        <div id="feedback-form" style="display:none;">
+            <h3>Feedback</h3>
+            <form id="feedback">
+                <label for="feeling">How do you feel now?</label>
+                <textarea id="feeling" name="feeling" required></textarea>
+
+                <label for="likes">What did you like the most?</label>
+                <textarea id="likes" name="likes" required></textarea>
+
+                <label for="suggestions">Any suggestions for improvement?</label>
+                <textarea id="suggestions" name="suggestions"></textarea>
+
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
